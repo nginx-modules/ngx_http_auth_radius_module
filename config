@@ -1,0 +1,13 @@
+ngx_addon_name=ngx_http_auth_radius_module
+
+CORE_INCS="$CORE_INCS $ngx_feature_path"
+CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
+
+HTTP_MODULES="$HTTP_MODULES ngx_http_auth_radius_module ngx_http_mcset_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS \
+    $ngx_addon_dir/src/ngx_http_auth_radius_module.c \
+    $ngx_addon_dir/src/ngx_http_mcset_module.c \
+    $ngx_addon_dir/src/radius_client.c \
+    $ngx_addon_dir/src/s_array.c"
+NGX_ADDON_DEPS="$NGX_ADDON_DEPS $ngx_addon_dir"
+
